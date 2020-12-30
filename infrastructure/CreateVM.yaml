@@ -1,5 +1,5 @@
 azure_rm_virtualmachine:
-  resource_group: Testing
+  resource_group: RG-IaC
   name: testvm10
   vm_size: Standard_B1
   admin_username: Kjento
