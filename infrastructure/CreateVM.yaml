@@ -2,7 +2,7 @@ azure_rm_virtualmachine:
   resource_group: RG-IaC
   name: testvm10
   vm_size: Standard_B1s
-  admin_username: chouseknecht
+  admin_username: Luca
   ssh_password_enabled: false
   ssh_public_keys: "{{ ssh_keys }}"
   image:
