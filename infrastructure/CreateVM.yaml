@@ -1,4 +1,4 @@
-azure_rm_virtualmachine:
+IaC-jenkins-CentOS:
   resource_group: RG-IaC
   name: testvm10
   hosts: localhost
