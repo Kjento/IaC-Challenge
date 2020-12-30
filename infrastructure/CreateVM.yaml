@@ -1,5 +1,5 @@
 - name: Create VM
-  azure_rm_virtualmachine:
+  azure.azcollection.azure_rm_virtualmachine:
     resource_group: RG-IAC
     name: testvm10
     vm_size: Standard_B1
