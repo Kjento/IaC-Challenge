@@ -1,4 +1,4 @@
-- name: Create LOL
+- name: Create VM
   azure_rm_virtualmachine:
     resource_group: RG-IAC
     name: testvm10
