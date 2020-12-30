@@ -1,5 +1,5 @@
 IaC-jenkins-CentOS:
-  resource_group: RG-IaC
+  resource_group: RG-IAC
   name: testvm10
   hosts: localhost
   vm_size: Standard_B1
