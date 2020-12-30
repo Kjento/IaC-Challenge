@@ -1,17 +1,17 @@
----
 - name: Create Azure VM
-  hosts: localhost
-  connecton: local
-  tasks:
-  azure_rm_virtualmachine:
-    resource_group: RG-IAC
-    name: testvm10
-    vm_size: Standard_B1
-    admin_username: Luca
-    ssh_password_enabled: false
-    ssh_public_keys: "{{ ssh_keys }}"
-    image:
-      offer: CentOS
-      publisher: OpenLogic
-      sku: '7.5'
-      version: latest
+    hosts: localhost
+    connection: local
+    tasks:
+    - name: Create VM
+      azure_rm_virtualmachine:
+        resource_group: RG-IAC
+        name: testvm10
+        vm_size: Standard_B1
+        admin_username: Luca
+        ssh_password_enabled: false
+        ssh_public_keys: "{{ ssh_keys }}"
+        image:
+          offer: CentOS
+          publisher: OpenLogic
+          sku: '7.5'
+          version: latest
