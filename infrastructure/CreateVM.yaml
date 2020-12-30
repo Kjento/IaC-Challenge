@@ -7,16 +7,14 @@
       resource_group: RG-IaC
       allocation_method: Static
       name: myPublicIP
-    
   - name: Create virtual network interface card
     azure_rm_networkinterface:
       resource_group: RG-IaC
-      name: myNIC
+      name: IaC_Webserver_NIC
       virtual_network: RG-IaC-vnet
       subnet: default
       public_ip_name: myPublicIP
-      security_group: myNetworkSecurityGroup
-      
+      security_group: IaC-Jenkins-CentOS-nsg
   - name: Create VM
     azure_rm_virtualmachine:
       resource_group: RG-IaC
