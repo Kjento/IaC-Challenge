@@ -1,6 +1,6 @@
 azure_rm_virtualmachine:
   resource_group: RG-IAC
-  name: IaC_Webserver_WKLC_2
+  name: IaC_Webserver_WKLC
   vm_size: Standard_B1
   admin_username: Luca
   ssh_password_enabled: false
