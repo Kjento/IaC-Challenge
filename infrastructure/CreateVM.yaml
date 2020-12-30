@@ -1,13 +1,12 @@
-- name: Create virtual machine
-  azure_rm_virtualmachine:
-    resource_group: RG-IAC
-    name: testvm001
-    vm_size: Standard_B1
-    admin_username: Luca
-    ssh_password_enabled: false
-    ssh_public_keys: "{{ ssh_keys }}"
-    image:
-      offer: CentOS
-      publisher: OpenLogic
-      sku: '7.1'
-      version: latest
+azure_rm_virtualmachine:
+  resource_group: Testing
+  name: testvm10
+  vm_size: Standard_B1
+  admin_username: chouseknecht
+  ssh_password_enabled: false
+  ssh_public_keys: "{{ ssh_keys }}"
+  image:
+    offer: CentOS
+    publisher: OpenLogic
+    sku: '7.1'
+    version: latest
