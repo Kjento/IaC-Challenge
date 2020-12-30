@@ -1,4 +1,4 @@
-- name: Create VM
+- name: Create vm
   azure.azcollection.azure_rm_virtualmachine:
     resource_group: RG-IAC
     name: testvm10
