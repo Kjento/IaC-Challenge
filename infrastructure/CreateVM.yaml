@@ -1,6 +1,7 @@
 azure_rm_virtualmachine:
   resource_group: RG-IaC
   name: testvm10
+  hosts: localhost
   vm_size: Standard_B1
   admin_username: WKLC Admin
   ssh_password_enabled: false
