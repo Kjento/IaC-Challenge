@@ -4,7 +4,8 @@
   hosts: localhost
   connection: local
   vars_files:
-  - /var/lib/jenkins/env_variables.yaml
+  - "{{ /var/lib/jenkins/env_variables.yaml }}"
+  environment: env_vars
   tasks:
   - name: Create public IP address
     azure_rm_publicipaddress:
