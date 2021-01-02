@@ -11,17 +11,17 @@
   tasks:
     - git:
         repo: ssh://git@github.com/Kjento/IaC-Challenge.git
-        dest: "application"
+        dest: "/var/www/my_app/build"
         update: yes
     - name: Install dependencies
       yarn:
-        path: "application"
+        path: "/var/www/my_app/build"
     - name: Build project
       command: yarn build
       args:
-        chdir: "application"
+        chdir: "/var/www/my_app/build"
     
     - name: Copy build to live directory
       command: cp -TRv build /var/www/my_app/build
       args:
-        chdir: "application"
+        chdir: "/var/www/my_app/build"
