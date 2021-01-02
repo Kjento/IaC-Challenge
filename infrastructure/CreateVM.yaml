@@ -4,10 +4,10 @@
   hosts: localhost
   connection: local
   environment:
-    AZURE_SUBSCRIPTION_ID=c8cb63f5-3f5d-4787-868f-3ee4ce95b17e
-    AZURE_TENANT=77d33cc5-c9b4-4766-95c7-ed5b515e1cce
-    AZURE_SECRET=Rr1234-56789
-    AZURE_CLIENT_ID=fb6b5c1c-7305-4699-bf54-ac230c4e3370
+    AZURE_SUBSCRIPTION_ID: c8cb63f5-3f5d-4787-868f-3ee4ce95b17e
+    AZURE_TENANT: 77d33cc5-c9b4-4766-95c7-ed5b515e1cce
+    AZURE_SECRET: Rr1234-56789
+    AZURE_CLIENT_ID: fb6b5c1c-7305-4699-bf54-ac230c4e3370
   tasks:
   - name: Create public IP address
     azure_rm_publicipaddress:
