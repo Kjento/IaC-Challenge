@@ -26,7 +26,6 @@
       name: IaC-Webserver
       vm_size: Standard_B1s
       admin_username: wklc_admin
-      ssh_password_enabled: false
       image:
         offer: CentOS
         publisher: OpenLogic
