@@ -25,7 +25,7 @@
       resource_group: RG-IaC
       name: IaC-Webserver
       vm_size: Standard_B1s
-      admin_username: wklc_admin
+      admin_username: Luca
       admin_password: Rr1234-56789
       ssh_password_enabled: false
       ssh_public_keys:
