@@ -9,6 +9,7 @@
     live_folder: /home
     repo_name: Kjento/IaC-Challenge
   tasks:
-    - git:
+  - git:
       repo: ssh://git@github.com/Kjento/IaC-Challenge.git
       dest: /home/Luca/hello
+      update: yes
