@@ -6,22 +6,9 @@
   hosts: localhost
   vars:
     repo_folder: https://github.com/Kjento/IaC-Challenge
-    live_folder: /var/www/my_app/build
+    live_folder: /home
     repo_name: Kjento/IaC-Challenge
   tasks:
     - git:
-        repo: ssh://git@github.com/Kjento/IaC-Challenge.git
-        dest: "/var/www/my_app/build"
-        update: yes
-    - name: Install dependencies
-      yarn:
-        path: "/var/www/my_app/build"
-    - name: Build project
-      command: yarn build
-      args:
-        chdir: "/var/www/my_app/build"
-    
-    - name: Copy build to live directory
-      command: cp -TRv build /var/www/my_app/build
-      args:
-        chdir: "/var/www/my_app/build"
+      repo: ssh://git@github.com/Kjento/IaC-Challenge.git
+      dest: /home/Luca/hello
