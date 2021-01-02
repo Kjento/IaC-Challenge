@@ -3,12 +3,9 @@
 - name: Create Azure VM
   hosts: localhost
   connection: local
-  environment:
-    AZURE_SUBSCRIPTION_ID: lookup('env','AZURE_SUBSCRIPTION_ID')
-    AZURE_TENANT: lookup('env','AZURE_TENANT')
-    AZURE_SECRET: lookup('env','AZURE_SECRET')
-    AZURE_CLIENT_ID: lookup('env','AZURE_CLIENT_ID')
   tasks:
+  - name: Load environment variables
+    include_vars: /var/lib/jenkins/env_variables.yaml
   - name: Create public IP address
     azure_rm_publicipaddress:
       resource_group: RG-IaC
