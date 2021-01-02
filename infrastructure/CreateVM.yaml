@@ -24,7 +24,7 @@
       vm_size: Standard_B1s
       admin_username: wklc_admin
       ssh_password_enabled: false
-      ssh_public_keys: "{{ AAAAB3NzaC1yc2EAAAADAQABAAABgQDj9lcNa4cSgGcNLQkxZ1R34AbHSexzD3Eqdo16rr6vhP1d9j3vJ01/EHE0KeBjCMOLhzJwDVmnK9yp7rUHVREl6RzYeYQo0I2GYKaZ4FQbGy792/QQDnpQhOeXLPmpuGniaK58jHRy6LncVmCTB+sseAu6BHC+/cX9CTO9jIFH3gA+sLjXNBA6z3aULhJICB9vOycO0hmMn3araoy9rjgHLviaaYkAVRkp1RqO5wKkNwYzdSFCvj0WKTs0xT2yhPbxLtG8hqcYUfHomKyBPrwzKwD0NUT6vKKJdVvNB7/M+q9t6rOh+xJm5y2lRD4RikxAwa69VYgoiVSeX1eROS0M2oI1wld4pJ2HcLu2HzCL+Ok2G4Aw/N8zj4BLokibeDdiDUB8BjQaoFG7yjRyCVq7ijoiaAltRmR6B1V+vkb70hKpg4eF/NP0OP3DZV1gi4YLgVc5CxzB/FuEtuqkGsaveMaHhizFtvWi0sQjatmixK00uGh3K6cdLqBhkoanwYE= }}" 
+      ssh_public_keys: "AAAAB3NzaC1yc2EAAAADAQABAAABgQDj9lcNa4cSgGcNLQkxZ1R34AbHSexzD3Eqdo16rr6vhP1d9j3vJ01/EHE0KeBjCMOLhzJwDVmnK9yp7rUHVREl6RzYeYQo0I2GYKaZ4FQbGy792/QQDnpQhOeXLPmpuGniaK58jHRy6LncVmCTB+sseAu6BHC+/cX9CTO9jIFH3gA+sLjXNBA6z3aULhJICB9vOycO0hmMn3araoy9rjgHLviaaYkAVRkp1RqO5wKkNwYzdSFCvj0WKTs0xT2yhPbxLtG8hqcYUfHomKyBPrwzKwD0NUT6vKKJdVvNB7/M+q9t6rOh+xJm5y2lRD4RikxAwa69VYgoiVSeX1eROS0M2oI1wld4pJ2HcLu2HzCL+Ok2G4Aw/N8zj4BLokibeDdiDUB8BjQaoFG7yjRyCVq7ijoiaAltRmR6B1V+vkb70hKpg4eF/NP0OP3DZV1gi4YLgVc5CxzB/FuEtuqkGsaveMaHhizFtvWi0sQjatmixK00uGh3K6cdLqBhkoanwYE=" 
       image:
         offer: CentOS
         publisher: OpenLogic
