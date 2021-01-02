@@ -13,15 +13,15 @@
         repo: ssh://git@github.com/Kjento/IaC-Challenge.git
         dest: "https://github.com/Kjento/IaC-Challenge/tree/main/application"
         update: yes
-   - name: Install dependencies
+    - name: Install dependencies
       yarn:
         path: "https://github.com/Kjento/IaC-Challenge/tree/main/application"
-   - name: Build project
+    - name: Build project
       command: yarn build
       args:
         chdir: "https://github.com/Kjento/IaC-Challenge/tree/main/application"
     
-   - name: Copy build to live directory
+    - name: Copy build to live directory
       command: cp -TRv build /var/www/my_app/build
       args:
         chdir: "https://github.com/Kjento/IaC-Challenge/tree/main/application"
