@@ -1,8 +1,11 @@
 ---
+
 - name: Create Azure VM
   hosts: localhost
   connection: local
   tasks:
+  - name: Load environment variables
+      bash: /etc/profile.d/azure_env.sh
   - name: Create public IP address
     azure_rm_publicipaddress:
       resource_group: RG-IaC
