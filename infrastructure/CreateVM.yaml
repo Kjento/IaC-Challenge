@@ -1,8 +1,10 @@
 ---
+
 - name: Create Azure VM
   hosts: localhost
   connection: local
-  include_vars: /var/lib/jenkins/env_variables.yaml
+  environment:
+    /var/lib/jenkins/env_variables.yaml
   tasks:
   - name: Create public IP address
     azure_rm_publicipaddress:
