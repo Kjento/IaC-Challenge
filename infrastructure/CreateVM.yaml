@@ -27,7 +27,9 @@
       vm_size: Standard_B1s
       admin_username: wklc_admin
       ssh_password_enabled: false
-      ssh_public_keys: "{{ ssh_keys }}"
+      ssh_public_keys:
+      - path: /var/lib/jenkins/IaC-Webserver-rsa
+        key_data: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDPqCLKNZ00bfeXU72km1omj03SOpOQT6ByHzS2F7JGoza7rw69KXVXQ/PmyHR+mx33acOzXbmGqgw4xz9Z4O6l6aNpnEAYdQqBE/VQoMXKC/Cf0zZGeYHUirl44ZiOrzEDFJsSHYsoxgBjsuVxisHUIxFfkc4dB2Lb/bzVzUANMX/7J8mKslvxsJ4IfV5H6lzwc2Qgk9+zaEha2ns2itpbTIUGy6WWOvpIVUIJBTAPFlD/UdM1P1vrE77tjT3WkgRB16qZBbe/Gyt1oLN/dSnOx06/4fn1V01qEDatdNK1gllKMzb7quzKfbuHylY+OyRV20Oge3owGcF2YFCdw4a86zcUjHlugM6PSrWS7deM8yQaUlhobF5folTiHtinoXbjWUaZcA9/wTuQRAtNBQ7v77MkBjQpGmmW+Xikopksi6TKjAEr3VEP+W7y1dOuUlIAEgjytLIB+ejXSArlueOlaV7TRdktESy2puY8Yt6b1rfrAi+Km511Gkw7XxhjM0E= jenkins@IaC-Jenkins-CentOS"
       image:
         offer: CentOS
         publisher: OpenLogic
