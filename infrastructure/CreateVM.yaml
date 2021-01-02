@@ -8,22 +8,22 @@
     azure_rm_publicipaddress:
       resource_group: RG-IaC
       allocation_method: Static
-      name: myPublicIPv4
+      name: IaC-Webserver-Public-IPv4
   - name: Create virtual network interface card
     azure_rm_networkinterface:
-      name: IaC_Webserver_NIC
+      name: IaC-Webserver-NIC
       resource_group: RG-IaC
       virtual_network: RG-IaC-vnet
       subnet_name: default
       ip_configurations:
       - name: ip01
-        public_ip_address_name: IaC_Webserver_Public_IPv4
+        public_ip_address_name: IaC-Webserver-Public-IPv4
         primary: True
       security_group: IaC-Jenkins-CentOS-nsg
   - name: Create VM
     azure_rm_virtualmachine:
       resource_group: RG-IaC
-      name: IaC_Webserver
+      name: IaC-Webserver
       vm_size: Standard_B1s
       admin_username: wklc_admin
       ssh_password_enabled: false
