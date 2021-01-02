@@ -22,7 +22,7 @@
       vm_size: Standard_B1s
       admin_username: wklc_admin
       ssh_password_enabled: false
-      ssh_public_keys:
+      ssh_public_keys: 
       image:
         offer: CentOS
         publisher: OpenLogic
