@@ -6,9 +6,11 @@
   hosts: localhost
   vars:
     repo_folder: https://github.com/Kjento/IaC-Challenge
-    live_folder: /home
+    live_folder: /home/www
     repo_name: Kjento/IaC-Challenge
   tasks:
+  - name: Fix 'support_tools' permissions
+      file: path=/home/www owner=Luca group=Luca mode=0775 state=directory recurse=yes
   - git:
       repo: ssh://git@github.com/Kjento/IaC-Challenge.git
       dest: /home/www
