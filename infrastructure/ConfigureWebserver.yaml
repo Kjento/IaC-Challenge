@@ -11,5 +11,5 @@
   tasks:
   - git:
       repo: ssh://git@github.com/Kjento/IaC-Challenge.git
-      dest: /home/Luca/hello
+      dest: /home
       update: yes
