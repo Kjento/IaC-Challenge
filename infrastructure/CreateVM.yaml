@@ -5,7 +5,6 @@
   connection: local
   tasks:
   - name: Load environment variables
-    ansible.builtin.script:
       script: /etc/profile.d/azure_env.sh
   - name: Create public IP address
     azure_rm_publicipaddress:
