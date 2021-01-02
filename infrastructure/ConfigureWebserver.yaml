@@ -3,7 +3,7 @@
 - name: Deploy React App Front-end Build
   connection: ssh
   gather_facts: false
-  hosts: IaC-Webserver
+  hosts: IaC-Webserver-NIC
   vars:
     repo_folder: https://github.com/Kjento/IaC-Challenge/application
     live_folder: /home/www
