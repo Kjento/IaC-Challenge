@@ -6,7 +6,7 @@
     azure_rm_publicipaddress:
       resource_group: RG-IaC
       allocation_method: Static
-      name: myPublicIP
+      name: myPublicIPv4
   - name: Create virtual network interface card
     azure_rm_networkinterface:
       resource_group: RG-IaC
