@@ -27,6 +27,10 @@
       vm_size: Standard_B1s
       admin_username: wklc_admin
       admin_password: Rr1234-56789
+      ssh_password_enabled: false
+      ssh_public_keys:
+        - path: /var/lib/jenkins/ssh_webserver
+          key_data: "AAAAB3NzaC1yc2EAAAADAQABAAABgQCbXc5y3lOtX3fRVY+t2Z5nmPpbZirUY+rBlDUCz9HwvFx2XwrhRrMREWLVzcdpOTs6VyHszpL+sZzzwQ+LX6Ss3MWAEHLF9JV1ph31GDtZHYhaywLt2CqXdzjUa7JMY7H8qFb1Ddtl6fzK6FPJqj1HLWQdI/2EwLayBFVbQqy66ZzO/OtMyvVxjxdhHNf/oLpjpov3sK3xLMsRHKoyeK3OFqnmN5i0+Uti4VnWnikB+qTFmATZylV5zrSyia8iZYxAwosYmd4C/WBmfCj72KZJOeUuqe/V2AsTslSGRCHUgfH1MdltENWRVbrZO8/uwfxghCLgtHdh4GWnXqxpCCnRDtW7cjOEEHkpaQ0raMAhceVt0tJDxPeSQWDpr+MJuT/BdWT8AOyAx8bp2Lac0WB0XK9GVGmXzuu9bDv15C6f4xkQFgmv5pSX6oxt1WpXnKMQevuRKgRK/S7F7RaAxGxbe0JIeC+MROpQ+Asaeq7vrVj8V3Faw8lcw73bFbc5tQ8="
       image:
         offer: CentOS
         publisher: OpenLogic
