@@ -3,6 +3,7 @@
 - name: Delete Azure IaC Resources
   hosts: localhost
   connection: local
+  gather_facts: false
   tasks:
   - name: Delete Webserver VM
     azure_rm_virtualmachine:

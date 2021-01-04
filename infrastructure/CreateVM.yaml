@@ -3,6 +3,7 @@
 - name: Create Azure IaC Resources
   hosts: localhost
   connection: local
+  gather_facts: false
   tasks:
   - name: Create public IP address
     azure_rm_publicipaddress:
