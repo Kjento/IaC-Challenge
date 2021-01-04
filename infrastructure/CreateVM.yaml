@@ -33,10 +33,8 @@
       ip_configurations:
       - name: ip01
         private_ip_address: 172.16.10.10
-        primary: True
-      - name: ip02
         public_ip_address_name: IaC-Webserver-Public-IPv4
-        primary: False
+        primary: True
       security_group: IaC-Jenkins-CentOS-nsg
   - name: Create Webserver VM
     azure_rm_virtualmachine:
