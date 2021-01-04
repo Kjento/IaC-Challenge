@@ -1,10 +1,15 @@
 ---
 
-- name: Create Azure VM
+- name: Delete Azure VM
   hosts: localhost
   connection: local
   tasks:
-  - name: Create public IP address
+  - name: Create VM
+    azure_rm_virtualmachine:
+      state: absent
+      name: IaC-Webserver
+      resource_group: RG-IaC
+  - name: Delete public IP address
     azure_rm_publicipaddress:
       state: absent
       name: IaC-Webserver-Public-IPv4
