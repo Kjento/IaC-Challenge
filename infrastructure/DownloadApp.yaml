@@ -5,9 +5,11 @@
   connection: local
   tasks:
   - name: Create Webserver Content Folder
-    command: mkdir /tmp/wwwroot/
-    become: true
+    file:
+      path: /tmp/iac_wwwroot/
+      state: directory
+
   - name: GitHub checkout (download content)
     git:
        repo: https://git@github.com/Kjento/IaC-Challenge.git
-       dest: /tmp/wwwroot/
+       dest: /tmp/iac_wwwroot/
