@@ -48,8 +48,8 @@
       ssh_public_keys:
         - path: /home/wklc-admin/.ssh/authorized_keys
           key_data: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtSqlY5+gyVMdu+wVTPpIfVYIYPcJE9UxVJm1UhBYf43ZGF9e/O5z7Hu0urJEOPN+PWT6HdpHNHadmumorH/dnNaLlQJlVJ+OxEmmUcTXAmnuokekzxZd/vl1y7wiHUQRiPLVN8lW3k8AMf9uOu46W96iRtERwRMHtIa8DXkNLrUdPmdn6Wo6wfEtDRFa4/FZPCDI2UramqSBLgIxBwgEuHe0G6MlvEPZf3BV5E0IlXt3uuq3rGoelWtXMc1EQTJQOxSFm7H0JCh/9pDzMumV124JFYKs2E2JnEx76vNjmqGHSNox7ChHHpVBPnGQqJuUGeBXdPaQ2FuMbhvpmOhO/a+12it67hWPJLrkPumLdVUR005F+HG+P4XA9fvjjTaZpQkONgsgHozbqk29rY4E69N/zZDiJSoNRS+gVEmXoWj9guCbX+wxX50KEHk6nBl2y0kZ5b/2mSQraF5DZ1fUgV9KxMxPxFz+/cLoMkyGpfsgEbv1h937SX17ewyHEiQU="
-          image:
-            offer: CentOS
-            publisher: OpenLogic
-            sku: '7.5'
-            version: latest
+      image:
+        offer: CentOS
+        publisher: OpenLogic
+        sku: '7.5'
+        version: latest
