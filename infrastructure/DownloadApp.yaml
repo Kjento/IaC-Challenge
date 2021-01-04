@@ -1,0 +1,17 @@
+---
+
+- name: Download content from GitHub Application folder
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Create Webserver Content Folder
+    file:
+      path: /home/wwwroot/
+      state: directory
+      become: true
+
+  - name: GitHub checkout (download content)
+    git:
+       repo: https://git@github.com/Kjento/IaC-Challenge.git
+       dest: /home/Luca/wwwroot
+       
