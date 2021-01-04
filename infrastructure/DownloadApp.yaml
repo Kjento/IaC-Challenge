@@ -9,7 +9,6 @@
       path: /home/wwwroot/
       state: directory
       become: true
-
   - name: GitHub checkout (download content)
     git:
        repo: https://git@github.com/Kjento/IaC-Challenge.git
