@@ -4,10 +4,15 @@
   hosts: localhost
   connection: local
   tasks:
-  - name: Create VM
+  - name: Delete VM
     azure_rm_virtualmachine:
       state: absent
       name: IaC-Webserver
+      resource_group: RG-IaC
+  - name: Delete virtual network interface card
+    azure_rm_networkinterface:
+      state: absent
+      name: IaC-Webserver-NIC
       resource_group: RG-IaC
   - name: Delete public IP address
     azure_rm_publicipaddress:
