@@ -1,6 +1,6 @@
 ---
 
-- name: Deploy React App Front-end Build
+- name: Deploy Webserver Content and Configuration
   connection: ssh
   gather_facts: false
   hosts: 172.16.10.10
