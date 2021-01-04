@@ -13,9 +13,7 @@
     file:
       path: /home/wklc-admin/wwwroot/
       state: directory
-
-
-   # - git:
-       # repo: https://git@github.com/Kjento/IaC-Challenge.git
-       # dest: /home/webserver/www
-       # update: no
+  - name: Download webcontent from GitHub Application folder
+    git:
+       repo: https://git@github.com/Kjento/IaC-Challenge.git
+       dest: /home/webserver/www
