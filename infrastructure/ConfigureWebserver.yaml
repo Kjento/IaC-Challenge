@@ -9,7 +9,11 @@
     live_folder: /home/www
     repo_name: Kjento/IaC-Challenge
   tasks:
-   - git:
-       repo: https://git@github.com/Kjento/IaC-Challenge.git
-       dest: /home/webserver/www
-       update: no
+  - name: Create Webserver Content Folder
+    file:
+      path: /wwwroot/
+      state: directory
+   # - git:
+       # repo: https://git@github.com/Kjento/IaC-Challenge.git
+       # dest: /home/webserver/www
+       # update: no
