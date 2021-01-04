@@ -33,6 +33,7 @@
       ip_configurations:
       - name: ip01
         private_ip_address: 172.16.10.10
+        private_ip_allocation_method: Static
         public_ip_address_name: IaC-Webserver-Public-IPv4
         primary: True
       security_group: IaC-Jenkins-CentOS-nsg
