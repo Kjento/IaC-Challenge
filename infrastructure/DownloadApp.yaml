@@ -11,6 +11,6 @@
       state: directory
   - name: GitHub checkout (download content)
     git:
-       repo: ssh://git@github.com:Kjento/IaC-Challenge.git
+       repo: ssh://git@github.com/Kjento/IaC-Challenge.git
        dest: /tmp/iac_wwwroot/
  
