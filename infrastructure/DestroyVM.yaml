@@ -1,0 +1,11 @@
+---
+
+- name: Create Azure VM
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Create public IP address
+    azure_rm_publicipaddress:
+      state: absent
+      name: IaC-Webserver-Public-IPv4
+      resource_group: RG-IaC
