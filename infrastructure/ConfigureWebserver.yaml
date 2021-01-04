@@ -11,7 +11,7 @@
   tasks:
   - name: Create Webserver Content Folder
     file:
-      path: /home/wwwroot/
+      path: /home/wklc-admin/wwwroot/
       state: directory
 
 
