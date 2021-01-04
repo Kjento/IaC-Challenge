@@ -9,8 +9,7 @@
     file:
       path: /tmp/iac_wwwroot/
       state: directory
-
   - name: GitHub checkout (download content)
     git:
-       repo: https://github.com/Kjento/IaC-Challenge.git
+       repo: git@github.com:Kjento/IaC-Challenge.git
        dest: /tmp/iac_wwwroot/
