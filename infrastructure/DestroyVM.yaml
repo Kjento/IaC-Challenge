@@ -20,5 +20,10 @@
       state: absent
       name: IaC-Webserver-Public-IPv4
       resource_group: RG-IaC
+  - name: Create security group that allows SSH
+    azure_rm_securitygroup:
+        state: absent
+        resource_group: RG-IaC
+        name: IaC-Webserver-nsg
 
 #WOUTERBOS

@@ -9,6 +9,17 @@
       resource_group: RG-IaC
       allocation_method: Static
       name: IaC-Webserver-Public-IPv4
+  - name: Create security group that allows SSH
+    azure_rm_securitygroup:
+    resource_group: RG-IaC
+    name: IaC-Webserver-nsg
+    rules:
+      - name: SSH_inbound
+        protocol: TCP
+        destination_port_range: 22
+        access: Allow
+        priority: 100
+        direction: Inbound
   - name: Create virtual network interface for webserver
     azure_rm_networkinterface:
       name: IaC-Webserver-NIC
