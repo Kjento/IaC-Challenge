@@ -10,6 +10,6 @@
     repo_name: Kjento/IaC-Challenge
   tasks:
    - git:
-     repo: https://git@github.com/Kjento/IaC-Challenge.git
-     dest: /home/webserver/www
-     update: no
+       repo: https://git@github.com/Kjento/IaC-Challenge.git
+       dest: /home/webserver/www
+       update: no
