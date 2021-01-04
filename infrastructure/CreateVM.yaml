@@ -9,7 +9,7 @@
       resource_group: RG-IaC
       allocation_method: Static
       name: IaC-Webserver-Public-IPv4
-  - name: Create virtual network interface card
+  - name: Create virtual network interface for webserver
     azure_rm_networkinterface:
       name: IaC-Webserver-NIC
       resource_group: RG-IaC
@@ -20,7 +20,7 @@
         public_ip_address_name: IaC-Webserver-Public-IPv4
         primary: True
       security_group: IaC-Jenkins-CentOS-nsg
-  - name: Create VM
+  - name: Create Webserver VM
     azure_rm_virtualmachine:
       resource_group: RG-IaC
       name: IaC-Webserver
