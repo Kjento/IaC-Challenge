@@ -17,6 +17,7 @@
       subnet_name: default
       ip_configurations:
       - name: ip01
+        private_ip_address: 172.16.10.10
         public_ip_address_name: IaC-Webserver-Public-IPv4
         primary: True
       security_group: IaC-Jenkins-CentOS-nsg
@@ -30,7 +31,7 @@
       admin_password: Rr1234-56789
       ssh_password_enabled: true
       ssh_public_keys:
-        - path: /home/Luca/.ssh/authorized_keys
+        - path: /home/wklc-admin/.ssh/authorized_keys
           key_data: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCc7rrhBgFSCKo0jpD/cIdXFK0msajMMvvSd9zGVVPts170P0fAfpGHDVFHBsHaa7XL/xIG5Vbvx3EJ0ekuyc+bw3qZNMrlUV3PDzXCY8y6yKKkAxOw3kzzpIO/jWq2y90LYJ4hdFxOrNbbTOxPZsZVdLyWE1s7HjivdwOhrxvt6U1KTP4LarLvM4CaApcNmuWW2a3XtYUWngbTMa86w+dimpNXPIlTs6VQtccFq55F0fjpvFdQy0+9pXg0+Kzd5qBANehM9c4+pxOO67MuudZajfbmORVHMH2QMY9QNnxzkpI4YJgL+YOvYZT5BCujMfaXBjarLRG2OFNXV8DYHSoRiRsfmQvc2B2eDS/+D6USCAePup+Fu7Hkis+LxxLK8PV9K6iCmZ2piqqMNj2x24WXeuBkirNkvl1ThEsLgT9l14/Szw8Mp/d0Ture38Ay1VwkHz/6x2ygFIwSYyrif900p/3j+9sfn45FiHDETu/V0GrUnKGQTALi19/JA26bAR8= Luca@IaC-Jenkins-CentOS"
       image:
         offer: CentOS
