@@ -1,6 +1,6 @@
 ---
 
-- name: Create Azure VM
+- name: Create Azure IaC Resources
   hosts: localhost
   connection: local
   tasks:
@@ -11,9 +11,9 @@
       name: IaC-Webserver-Public-IPv4
   - name: Create security group that allows SSH
     azure_rm_securitygroup:
-    resource_group: RG-IaC
-    name: IaC-Webserver-nsg
-    rules:
+      resource_group: RG-IaC
+      name: IaC-Webserver-nsg
+      rules:
       - name: SSH_inbound
         protocol: TCP
         destination_port_range: 22
