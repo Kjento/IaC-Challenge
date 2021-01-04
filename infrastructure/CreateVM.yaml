@@ -15,7 +15,7 @@
       name: IaC-Webserver-nsg
       rules:
       - name: SSH_inbound
-        protocol: TCP
+        protocol: Tcp
         destination_port_range: 22
         access: Allow
         priority: 100
