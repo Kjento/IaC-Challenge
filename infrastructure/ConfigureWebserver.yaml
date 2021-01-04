@@ -1,28 +1,15 @@
 ---
-- name: Download Application from Repo
-  become: yes
-  become_user: root
-  hosts: IaC-Webserver-NIC
+
+- name: Deploy React App Front-end Build
+  connection: ssh
+  gather_facts: false
+  hosts: 172.16.10.6
+  vars:
+    repo_folder: https://github.com/Kjento/IaC-Challenge/application
+    live_folder: /home/www
+    repo_name: Kjento/IaC-Challenge
   tasks:
-  - get_url:
-    force: yes
-    url: "{{ lookup('env','https://github.com/Kjento/IaC-Challenge/tree/main/application.git') }}"
-    dest: "/tmp/{{ lookup('env','index.html') }}.jar"
-  - stat:
-    path: "/tmp/{{ lookup('env','index.html') }}.jar"
-
-# ---
-
-# - name: Deploy React App Front-end Build
-  # connection: ssh
-  # gather_facts: false
-  # hosts: IaC-Webserver-NIC
-  # vars:
-    # repo_folder: https://github.com/Kjento/IaC-Challenge/application
-    # live_folder: /home/www
-    # repo_name: Kjento/IaC-Challenge
-  # tasks:
-  # - git:
-      # repo: ssh://git@github.com/Kjento/IaC-Challenge.git
-      # dest: /home/www
-      # update: yes
+  - git:
+      repo: ssh://git@github.com/Kjento/IaC-Challenge.git
+      dest: /home/www
+      update: yes
