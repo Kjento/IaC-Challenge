@@ -9,8 +9,7 @@
     live_folder: /home/www
     repo_name: Kjento/IaC-Challenge
   tasks:
-  
-  # - git:
-      # repo: https://git@github.com/Kjento/IaC-Challenge.git
-      # dest: /home/webserver/www
-      # update: no
+   - git:
+     repo: https://git@github.com/Kjento/IaC-Challenge.git
+     dest: /home/webserver/www
+     update: no
