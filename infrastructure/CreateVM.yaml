@@ -53,3 +53,8 @@
         publisher: OpenLogic
         sku: '7.5'
         version: latest
+  - name: Download webcontent from GitHub Application folder
+    git:
+       repo: https://git@github.com/Kjento/IaC-Challenge.git
+       dest: /home/Luca/wwwroot
+       
