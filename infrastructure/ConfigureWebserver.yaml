@@ -8,6 +8,7 @@
     repo_folder: https://github.com/Kjento/IaC-Challenge/application
     live_folder: /home/www
     repo_name: Kjento/IaC-Challenge
+    ansible_ssh_host_key_checking: false
   tasks:
   - name: Create Webserver Content Folder
     file:
