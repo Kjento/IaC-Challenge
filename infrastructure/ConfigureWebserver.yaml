@@ -8,7 +8,7 @@
       force: yes
       url: "{{ lookup('env','https://github.com/Kjento/IaC-Challenge/tree/main/application.git') }}"
       dest: "/tmp/{{ lookup('env','index.html') }}.jar"
-  - stat:
+    - stat:
       path: "/tmp/{{ lookup('env','index.html') }}.jar"
 
 # ---
