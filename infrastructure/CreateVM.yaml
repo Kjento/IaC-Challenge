@@ -47,8 +47,7 @@
       ssh_password_enabled: false
       ssh_public_keys:
         - path: /home/wklc-admin/.ssh/authorized_keys
-          key_data: "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPiaK+MiFJwJXyA6iBraPwGA9MGDWZfnWylkpzf1GKs3JopGoykvTcz085Vr5r5EIn0e8hFc5Uob3RTPm/Wd1g4="
-
+          key_data:  "{{ ssh_keys }}"
       image:
         offer: CentOS
         publisher: OpenLogic
