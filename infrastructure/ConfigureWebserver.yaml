@@ -12,4 +12,4 @@
   - git:
       repo: ssh://git@github.com/Kjento/IaC-Challenge.git
       dest: /home/webserver/www
-      update: yes
+      update: no
