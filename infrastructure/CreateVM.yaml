@@ -7,6 +7,7 @@
   - name: Create public IP address
     azure_rm_publicipaddress:
       resource_group: RG-IaC
+      domain_name: iac-wklc-web
       allocation_method: Static
       name: IaC-Webserver-Public-IPv4
   - name: Create security group that allows SSH
@@ -14,9 +15,12 @@
       resource_group: RG-IaC
       name: IaC-Webserver-nsg
       rules:
-      - name: SSH_inbound
+      - name: Allow_VM_traffic_inbound
         protocol: Tcp
-        destination_port_range: 22
+        destination_port_range:
+        - 22
+        - 80
+        - 443
         access: Allow
         priority: 100
         direction: Inbound
@@ -29,8 +33,10 @@
       ip_configurations:
       - name: ip01
         private_ip_address: 172.16.10.10
-        public_ip_address_name: IaC-Webserver-Public-IPv4
         primary: True
+      - name: ip02
+        public_ip_address_name: IaC-Webserver-Public-IPv4
+        primary: False
       security_group: IaC-Jenkins-CentOS-nsg
   - name: Create Webserver VM
     azure_rm_virtualmachine:
