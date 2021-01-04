@@ -13,6 +13,7 @@
     azure_rm_networkinterface:
       state: absent
       name: IaC-Webserver-NIC
+      virtual_network: RG-IaC-vnet
       resource_group: RG-IaC
   - name: Delete public IP address
     azure_rm_publicipaddress:
