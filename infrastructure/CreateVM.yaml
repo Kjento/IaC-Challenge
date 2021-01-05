@@ -44,6 +44,7 @@
       name: IaC-Webserver
       vm_size: Standard_B1s
       network_interfaces: IaC-Webserver-NIC
+      storage_account: IaC-Webserver-store
       admin_username: wklc-admin
       ssh_password_enabled: false
       ssh_public_keys:
