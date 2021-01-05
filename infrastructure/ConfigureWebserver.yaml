@@ -13,3 +13,7 @@
     file:
       path: /home/wklc-admin/wwwroot/
       state: directory
+  - name: Download Webserver Content from 'IaC-Jenkins-CentOS' server
+    copy:
+      src: /tmp/iac_github/application
+      dest: /home/wklc-admin/wwwroot/

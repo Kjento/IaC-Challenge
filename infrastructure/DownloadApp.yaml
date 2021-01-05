@@ -7,12 +7,12 @@
   tasks:
   - name: Create Webserver Content Folder
     file:
-      path: /tmp/iac_wwwroot/
+      path: /tmp/iac_github/
       state: directory
   - name: GitHub checkout (download content)
     git:
        repo: ssh://git@github.com/Kjento/IaC-Challenge.git
-       dest: /tmp/iac_wwwroot/
+       dest: /tmp/iac_github/
        update: yes
        key_file: /var/iac-github.key
  
