@@ -2,7 +2,7 @@
 
 - name: Download content from GitHub Application folder
   hosts: localhost
-  connection: local
+  connection: ssh
   gather_facts: false
   tasks:
   - name: Create Webserver Content Folder
