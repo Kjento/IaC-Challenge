@@ -13,4 +13,5 @@
     git:
        repo: ssh://git@github.com/Kjento/IaC-Challenge.git
        dest: /tmp/iac_wwwroot/
+       update: yes
  
