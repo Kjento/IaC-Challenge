@@ -22,7 +22,7 @@
       src: /tmp/iac_github/application/
       dest: /usr/share/nginx/html/
       mode: '0755'
-      become: yes
+    become: yes
   - name: Install nginx webserver
     yum:
       name: nginx
