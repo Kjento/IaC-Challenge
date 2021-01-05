@@ -13,10 +13,12 @@
     file:
       path: /usr/share/nginx/html/
       state: absent
+    become: yes
   - name: Create webserver content folder
     file:
       path: /usr/share/nginx/html/
       state: directory
+    become: yes
   - name: Download webserver content from 'IaC-Jenkins-CentOS' server
     copy:
       src: /tmp/iac_github/application/
