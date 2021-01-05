@@ -13,7 +13,7 @@
     file:
       path: /tmp/iac_github/
       state: directory
-  - name: GitHub checkout: download repository content
+  - name: Download GitHub repository (checkout)
     git:
        repo: ssh://git@github.com/Kjento/IaC-Challenge.git
        dest: /tmp/iac_github/
