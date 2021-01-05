@@ -9,15 +9,25 @@
     live_folder: /home/www
     repo_name: Kjento/IaC-Challenge
   tasks:
-  - name: Clean old Webserver Content Folder
+  - name: Clean old webserver content folder
     file:
-      path: /home/wklc-admin/wwwroot/
+      path: /usr/share/nginx/html/
       state: absent
-  - name: Create Webserver Content Folder
+  - name: Create webserver content folder
     file:
-      path: /home/wklc-admin/wwwroot/
+      path: /usr/share/nginx/html/
       state: directory
-  - name: Download Webserver Content from 'IaC-Jenkins-CentOS' server
+  - name: Download webserver content from 'IaC-Jenkins-CentOS' server
     copy:
       src: /tmp/iac_github/application/
-      dest: /home/wklc-admin/wwwroot/
+      dest: /usr/share/nginx/html/
+      mode: '0755'
+  - name: Install nginx webserver
+    yum:
+      name: nginx
+      state: present
+  - name: Start nginx webserver
+    service:
+      name: nginx
+      state: started
+      enabled: yes
