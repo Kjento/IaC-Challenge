@@ -5,7 +5,11 @@
   connection: local
   gather_facts: false
   tasks:
-  - name: Create Webserver Content Folder
+  - name: Remove old GitHub Local Content Folder
+    file:
+      path: /tmp/iac_github/
+      state: absent 
+  - name: Create GitHub Local Content Folder
     file:
       path: /tmp/iac_github/
       state: directory
@@ -13,6 +17,5 @@
     git:
        repo: ssh://git@github.com/Kjento/IaC-Challenge.git
        dest: /tmp/iac_github/
-       update: yes
        key_file: /var/iac-github.key
  
