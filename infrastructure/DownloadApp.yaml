@@ -5,15 +5,15 @@
   connection: local
   gather_facts: false
   tasks:
-  - name: Remove old GitHub Local Content Folder
+  - name: Remove old GitHub local content folder
     file:
       path: /tmp/iac_github/
       state: absent 
-  - name: Create GitHub Local Content Folder
+  - name: Create GitHub local content folder
     file:
       path: /tmp/iac_github/
       state: directory
-  - name: GitHub checkout (download content)
+  - name: GitHub checkout: download repository content
     git:
        repo: ssh://git@github.com/Kjento/IaC-Challenge.git
        dest: /tmp/iac_github/
