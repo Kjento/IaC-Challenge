@@ -4,6 +4,7 @@
   connection: ssh
   gather_facts: false
   hosts: 172.16.10.10
+  become: true
   vars:
     repo_folder: https://github.com/Kjento/IaC-Challenge/application
     live_folder: /home/www
@@ -13,18 +14,23 @@
     file:
       path: /usr/share/nginx/html/
       state: absent
-    become: yes
   - name: Create webserver content folder
     file:
       path: /usr/share/nginx/html/
       state: directory
-    become: yes
   - name: Download webserver content from 'IaC-Jenkins-CentOS' server
     copy:
       src: /tmp/iac_github/application/
       dest: /usr/share/nginx/html/
       mode: '0755'
-    become: yes
+  - name: Setting up nginx repository
+    copy:
+      dest: /etc/yum.repos.d/nginx.repo
+      content: |
+        [nginx]
+        name=nginx repo
+        baseurl=http://nginx.org/packages/centos/$releasever/$basearch/
+        gpgcheck=0
   - name: Install nginx webserver
     yum:
       name: nginx
