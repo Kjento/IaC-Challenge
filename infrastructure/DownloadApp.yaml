@@ -14,4 +14,5 @@
        repo: ssh://git@github.com/Kjento/IaC-Challenge.git
        dest: /tmp/iac_wwwroot/
        update: yes
+       key_file: /tmp/ssh5315902378920631758.key
  
