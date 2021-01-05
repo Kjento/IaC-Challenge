@@ -29,6 +29,7 @@
     yum:
       name: nginx
       state: present
+      enablerepo: nginx
   - name: Start nginx webserver
     service:
       name: nginx
