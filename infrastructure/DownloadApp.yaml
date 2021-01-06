@@ -1,4 +1,5 @@
 ---
+# Groep 7 | Wouter Bosmans, Kjento Lauwers, Luca Claes, Cédric Gijsels
 
 - name: Download content from GitHub Application folder
   hosts: localhost

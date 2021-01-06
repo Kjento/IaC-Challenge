@@ -1,4 +1,5 @@
 ---
+# Groep 7 | Wouter Bosmans, Kjento Lauwers, Luca Claes, Cédric Gijsels
 
 - name: Delete Azure IaC Resources
   hosts: localhost
@@ -27,4 +28,4 @@
         resource_group: RG-IaC
         name: IaC-Webserver-nsg
 
-#WOUTERBOS
+# Groep 7 | Wouter Bosmans, Kjento Lauwers, Luca Claes, Cédric Gijsels
